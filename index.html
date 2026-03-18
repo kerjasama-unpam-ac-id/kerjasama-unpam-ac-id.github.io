@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kerjasama &#8211; Universitas Pamulang</title>
+<meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+<link rel="icon" href="https://kerjasama-unpam-ac-id.github.io/logo-unpam.png" sizes="32x32"/>
+<link rel="icon" href="https://kerjasama-unpam-ac-id.github.io/logo-unpam.png" sizes="192x192"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;font-size:14px;color:#333;background:#f1f1f1;line-height:1.5}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── ADMIN BAR ── */
+#wpadminbar{display:none}
+
+/* ── TOP BAR ── */
+#topbar{background:#21759b;color:#fff;font-size:11px;padding:0}
+#topbar .tb-inner{max-width:1080px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;justify-content:space-between;min-height:32px}
+#topbar .tb-left{display:flex;align-items:center;gap:20px}
+#topbar .tb-left a,#topbar .tb-right a{color:#fff;opacity:.85;font-size:11px}
+#topbar .tb-left a:hover,#topbar .tb-right a:hover{opacity:1;text-decoration:underline}
+#topbar .tb-left span{display:flex;align-items:center;gap:5px}
+#topbar .tb-right{display:flex;align-items:center;gap:10px}
+#topbar .tb-right .social{display:flex;gap:6px;align-items:center}
+#topbar .tb-right .social a{width:24px;height:24px;background:rgba(255,255,255,.15);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:11px}
+#topbar .tb-right .social a:hover{background:rgba(255,255,255,.35)}
+#topbar .sep{opacity:.3;margin:0 4px}
+
+/* ── HEADER / BRANDING ── */
+#masthead{background:#fff;border-bottom:3px solid #21759b;padding:0}
+.site-branding{max-width:1080px;margin:0 auto;padding:12px 10px;display:flex;align-items:center;justify-content:space-between}
+.site-branding .logo-area{display:flex;align-items:center;gap:14px}
+.site-branding .logo-area img{height:65px;width:auto;object-fit:contain}
+.site-branding .site-title{font-size:22px;font-weight:700;color:#21759b;line-height:1.1;letter-spacing:.3px}
+.site-branding .site-title span{display:block;font-size:12px;color:#ecb200;font-weight:600;letter-spacing:.5px;margin-top:2px}
+.site-branding .header-right{text-align:right;font-size:11px;color:#888}
+.site-branding .header-right strong{display:block;color:#21759b;font-size:13px;font-weight:700}
+
+/* ── NAVIGATION ── */
+#site-navigation{background:#21759b;border-bottom:3px solid #ecb200}
+.nav-wrap{max-width:1080px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch}
+.nav-wrap > .menu-item{position:relative}
+.nav-wrap > .menu-item > a{display:flex;align-items:center;color:#fff;font-size:13px;font-weight:600;padding:12px 14px;white-space:nowrap;letter-spacing:.2px;height:100%}
+.nav-wrap > .menu-item > a:hover,.nav-wrap > .menu-item.current > a{background:#ecb200}
+.nav-wrap > .menu-item.has-children > a::after{content:' ▾';font-size:9px;margin-left:3px;opacity:.8}
+.sub-menu{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:230px;box-shadow:0 6px 18px rgba(0,0,0,.18);z-index:9999;border-top:3px solid #ecb200}
+.menu-item:hover > .sub-menu{display:block}
+.sub-menu .menu-item a{display:block;padding:9px 16px;font-size:12.5px;color:#333;border-bottom:1px solid #f0f0f0}
+.sub-menu .menu-item a:hover{background:#f4f8ff;color:#21759b;padding-left:20px}
+.sub-menu .menu-item:last-child a{border-bottom:none}
+
+/* ── HERO SLIDER ── */
+#hero{position:relative;width:100%;overflow:hidden;background:#0d2550}
+.slides-container{display:flex;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.slide{min-width:100%;position:relative;height:380px;flex-shrink:0}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 60%)}
+.slide-caption{position:absolute;bottom:0;left:0;right:0;padding:24px 40px;color:#fff}
+.slide-caption h2{font-size:24px;font-weight:700;line-height:1.3;text-shadow:1px 2px 8px rgba(0,0,0,.7);max-width:580px;margin-bottom:6px}
+.slide-caption p{font-size:13px;opacity:.92;max-width:500px;text-shadow:1px 1px 4px rgba(0,0,0,.6)}
+.slider-ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.22);border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer;z-index:10;transition:background .2s;display:flex;align-items:center;justify-content:center}
+.slider-ctrl:hover{background:rgba(255,255,255,.5)}
+.slider-ctrl.prev{left:14px}
+.slider-ctrl.next{right:14px}
+.slider-dots{position:absolute;bottom:12px;right:20px;display:flex;gap:7px}
+.sdot{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;transition:all .25s;border:1.5px solid rgba(255,255,255,.4)}
+.sdot.on{background:#fff;border-color:#fff}
+
+/* ── TICKER ── */
+#ticker{background:#ecb200;color:#fff;font-size:12.5px;overflow:hidden;display:flex;align-items:stretch}
+.ticker-label{background:#21759b;padding:9px 16px;font-weight:700;font-size:11px;letter-spacing:1px;white-space:nowrap;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.ticker-label i{animation:bell .8s infinite alternate}
+@keyframes bell{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+.ticker-inner{flex:1;overflow:hidden;padding:9px 0}
+.ticker-track{display:flex;gap:0;white-space:nowrap;animation:ticker-anim 45s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{padding:0 40px;border-right:1px solid rgba(255,255,255,.3)}
+@keyframes ticker-anim{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── LAYOUT ── */
+#main-content{max-width:1080px;margin:22px auto;padding:0 10px;display:flex;gap:22px;align-items:flex-start}
+#primary{flex:1;min-width:0}
+#secondary{width:295px;flex-shrink:0}
+
+/* ── WIDGET BOX ── */
+.widget{background:#fff;margin-bottom:20px;border:1px solid #e1e1e1}
+.widget-title{background:#21759b;color:#fff;font-size:13px;font-weight:700;padding:10px 14px;letter-spacing:.4px;border-bottom:none;margin-bottom:0;display:flex;align-items:center;gap:8px}
+.widget-title i{font-size:12px;opacity:.85}
+.widget-body{padding:12px}
+
+/* ── SEARCH WIDGET ── */
+.search-form{display:flex}
+.search-form input[type=search]{flex:1;padding:7px 10px;border:1px solid #ddd;border-right:none;font-size:13px;font-family:inherit;outline:none}
+.search-form button{background:#ecb200;color:#fff;border:none;padding:7px 13px;cursor:pointer;font-size:13px}
+.search-form button:hover{background:#21759b}
+
+/* ── RECENT POSTS SIDEBAR ── */
+.side-posts{list-style:none}
+.side-posts li{padding:8px 0;border-bottom:1px solid #f0f0f0;display:flex;gap:9px;align-items:flex-start}
+.side-posts li:last-child{border-bottom:none}
+.side-posts li .spost-thumb{width:58px;height:44px;object-fit:cover;flex-shrink:0;border:1px solid #eee}
+.side-posts li .spost-text{}
+.side-posts li .spost-title{font-size:12px;font-weight:600;color:#333;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.side-posts li .spost-title:hover{color:#21759b}
+.side-posts li .spost-date{font-size:10.5px;color:#999;margin-top:3px}
+
+/* ── CATEGORIES SIDEBAR ── */
+.cat-list{list-style:none}
+.cat-list li{border-bottom:1px solid #f4f4f4;padding:7px 0}
+.cat-list li:last-child{border-bottom:none}
+.cat-list li a{font-size:13px;color:#444}
+.cat-list li a:hover{color:#ecb200}
+.cat-list li a::before{content:'› ';color:#21759b;font-weight:700}
+.cat-list li .cat-count{float:right;font-size:11px;color:#aaa}
+
+/* ── CALENDAR WIDGET ── */
+#wp-calendar{width:100%;border-collapse:collapse;font-size:12px}
+#wp-calendar caption{font-weight:700;font-size:12px;padding:6px 0;color:#21759b;text-align:left}
+#wp-calendar th{background:#21759b;color:#fff;padding:4px 6px;text-align:center;font-weight:600}
+#wp-calendar td{padding:4px 6px;text-align:center;border:1px solid #eee}
+#wp-calendar td a{color:#ecb200;font-weight:700}
+#wp-calendar td.pad{background:#fafafa}
+#wp-calendar tfoot td a{font-size:11px;color:#666}
+
+/* ── POST SECTION TITLE ── */
+.section-heading{font-size:15px;font-weight:700;color:#21759b;padding:8px 0 8px 10px;border-left:4px solid #ecb200;margin-bottom:14px;background:transparent;display:flex;align-items:center;gap:8px}
+
+/* ── POST CARDS ── */
+.post-list{display:flex;flex-direction:column;gap:0}
+.post-card{background:#fff;border:1px solid #e1e1e1;margin-bottom:16px;display:flex;gap:0;overflow:hidden}
+.post-card:hover .post-card-title{color:#ecb200}
+.post-card-thumb{width:185px;flex-shrink:0;overflow:hidden;position:relative}
+.post-card-thumb img{width:100%;height:100%;object-fit:cover;min-height:130px;transition:transform .4s}
+.post-card:hover .post-card-thumb img{transform:scale(1.04)}
+.post-card-body{padding:12px 14px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.post-card-meta{font-size:11px;color:#999;margin-bottom:5px;display:flex;gap:10px;flex-wrap:wrap}
+.post-card-meta span{display:flex;align-items:center;gap:4px}
+.post-card-meta i{font-size:10px;color:#21759b}
+.post-card-title{font-size:14.5px;font-weight:700;color:#333;line-height:1.4;margin-bottom:6px;transition:color .2s}
+.post-card-excerpt{font-size:12.5px;color:#666;line-height:1.7;flex:1}
+.post-card-more{display:inline-block;margin-top:10px;font-size:12px;color:#21759b;font-weight:700;border:1px solid #21759b;padding:3px 10px;border-radius:2px;transition:all .2s;align-self:flex-start}
+.post-card-more:hover{background:#21759b;color:#fff}
+.post-card-category{display:inline-block;background:#ecb200;color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:2px;margin-bottom:6px;letter-spacing:.4px;text-transform:uppercase}
+
+/* ── FEATURED LARGE POST (first post) ── */
+.post-featured{background:#fff;border:1px solid #e1e1e1;margin-bottom:16px;overflow:hidden}
+.post-featured .feat-thumb{width:100%;height:250px;overflow:hidden;position:relative}
+.post-featured .feat-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.post-featured:hover .feat-thumb img{transform:scale(1.03)}
+.post-featured .feat-body{padding:14px 16px}
+.post-featured .feat-body .post-card-meta{margin-bottom:7px}
+.post-featured .feat-title{font-size:18px;font-weight:700;color:#333;line-height:1.35;margin-bottom:8px}
+.post-featured:hover .feat-title{color:#ecb200}
+.post-featured .feat-excerpt{font-size:13px;color:#555;line-height:1.75}
+
+/* ── PAGINATION ── */
+.nav-links{display:flex;gap:4px;margin:16px 0}
+.nav-links a,.nav-links span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid #ddd;font-size:12px;color:#333}
+.nav-links .current{background:#21759b;color:#fff;border-color:#21759b}
+.nav-links a:hover{border-color:#21759b;color:#21759b}
+
+/* ── ABOUT BANNER ── */
+.about-banner{background:linear-gradient(135deg,#21759b 0%,#0d2550 100%);color:#fff;padding:28px 22px;margin-bottom:20px}
+.about-banner h3{font-size:16px;font-weight:700;margin-bottom:10px}
+.about-banner p{font-size:12.5px;line-height:1.8;opacity:.9;margin-bottom:14px}
+.about-banner .btn-white{display:inline-block;background:#fff;color:#21759b;font-size:12px;font-weight:700;padding:7px 16px;border-radius:2px}
+.about-banner .btn-white:hover{background:#f0f0f0}
+
+/* ── STATS SECTION ── */
+#stats-section{background:linear-gradient(135deg,#0d2550 0%,#21759b 100%);padding:28px 0}
+.stats-inner{max-width:1080px;margin:0 auto;padding:0 10px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-box{text-align:center;padding:16px 8px;border-right:1px solid rgba(255,255,255,.15)}
+.stat-box:last-child{border-right:none}
+.stat-number{font-size:40px;font-weight:700;color:#f0c040;line-height:1;font-family:Georgia,serif}
+.stat-plus{font-size:24px;vertical-align:super}
+.stat-label{font-size:12.5px;color:#c8dfee;margin-top:6px;line-height:1.4}
+.stat-icon{font-size:20px;color:rgba(255,255,255,.5);margin-bottom:6px}
+
+/* ── PARTNERS ── */
+#partners{background:#fff;padding:28px 0;border-top:1px solid #eee}
+.partners-inner{max-width:1080px;margin:0 auto;padding:0 10px}
+.section-block-title{text-align:center;margin-bottom:20px}
+.section-block-title h2{font-size:19px;font-weight:700;color:#21759b;margin-bottom:4px}
+.section-block-title p{font-size:12.5px;color:#999}
+.section-block-title .divider{width:50px;height:3px;background:#ecb200;margin:8px auto 0}
+.logo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.logo-cell{border:1px solid #e8e8e8;padding:10px 8px;display:flex;align-items:center;justify-content:center;height:72px;background:#fafafa;transition:box-shadow .2s,background .2s;overflow:hidden}
+.logo-cell:hover{box-shadow:0 3px 12px rgba(0,0,0,.12);background:#fff}
+.logo-cell img{max-width:100%;max-height:52px;object-fit:contain;filter:grayscale(20%);transition:filter .3s}
+.logo-cell:hover img{filter:none}
+.logo-cell .logo-name{font-size:10px;font-weight:700;color:#555;text-align:center;line-height:1.3}
+
+/* ── FOOTER ── */
+#colophon{background:#1a2638;color:#adb5bd;padding:36px 0 0}
+.footer-widgets{max-width:1080px;margin:0 auto;padding:0 10px 28px;display:grid;grid-template-columns:2.2fr 1.3fr 1.3fr 1.6fr;gap:28px}
+.footer-widget h4{color:#fff;font-size:13.5px;font-weight:700;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #ecb200;position:relative}
+.footer-widget p,.footer-widget li{font-size:12.5px;line-height:1.9;color:#adb5bd}
+.footer-widget ul{list-style:none}
+.footer-widget ul li::before{content:'» ';color:#ecb200}
+.footer-widget ul li a{color:#adb5bd}
+.footer-widget ul li a:hover{color:#fff}
+.footer-logo-wrap{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.footer-logo-wrap img{height:50px;width:auto}
+.footer-logo-wrap .ftitle{color:#fff;font-size:14px;font-weight:700;line-height:1.2}
+.footer-logo-wrap .fsub{color:#ecb200;font-size:11px;margin-top:2px}
+.footer-contact li{display:flex;gap:9px;align-items:flex-start;padding:4px 0;list-style:none}
+.footer-contact li::before{display:none}
+.footer-contact li i{color:#ecb200;margin-top:3px;flex-shrink:0;width:14px;text-align:center}
+.footer-social{display:flex;gap:8px;margin-top:14px}
+.footer-social a{width:30px;height:30px;background:#243447;border-radius:4px;color:#adb5bd;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .2s}
+.footer-social a:hover{background:#ecb200;color:#fff}
+.footer-bottom{background:#111c28;padding:13px 10px;text-align:center;font-size:12px;color:#6c757d;border-top:1px solid #243447}
+.footer-bottom a{color:#ecb200}
+.footer-bottom a:hover{text-decoration:underline}
+
+/* ── SISKERMA WIDGET ── */
+.siskerma-widget{background:linear-gradient(160deg,#21759b,#0d2550);color:#fff;padding:16px;margin-bottom:20px;border:1px solid #1a5f7a;text-align:center}
+.siskerma-widget .sw-icon{font-size:36px;margin-bottom:10px;display:block;color:#f0c040}
+.siskerma-widget h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.siskerma-widget p{font-size:12px;opacity:.85;margin-bottom:14px;line-height:1.6}
+.siskerma-widget .btn-siskerma{display:block;background:#ecb200;color:#fff;font-size:13px;font-weight:700;padding:9px;border-radius:2px;margin-bottom:8px;transition:background .2s}
+.siskerma-widget .btn-siskerma:hover{background:#21759b}
+.siskerma-widget .btn-daftar{display:block;background:rgba(255,255,255,.15);color:#fff;font-size:12px;padding:7px;border-radius:2px;border:1px solid rgba(255,255,255,.3);transition:background .2s}
+.siskerma-widget .btn-daftar:hover{background:rgba(255,255,255,.25)}
+
+/* ── TAGS WIDGET ── */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:5px;padding:12px}
+.tag-cloud a{font-size:11.5px;background:#f4f4f4;border:1px solid #e1e1e1;padding:3px 8px;border-radius:2px;color:#555}
+.tag-cloud a:hover{background:#21759b;color:#fff;border-color:#21759b}
+
+/* ── IMAGE SLIDER THUMBS ── */
+.slide-nav{position:absolute;bottom:50px;right:14px;display:flex;flex-direction:column;gap:5px;z-index:5}
+.slide-nav-thumb{width:50px;height:34px;object-fit:cover;opacity:.55;cursor:pointer;border:2px solid transparent;transition:all .2s}
+.slide-nav-thumb.on{opacity:1;border-color:#fff}
+
+/* ── BREADCRUMB ── */
+#breadcrumb{background:#fff;border-bottom:1px solid #e1e1e1;padding:0}
+.bc-inner{max-width:1080px;margin:0 auto;padding:7px 10px;font-size:12px;color:#888}
+.bc-inner a{color:#21759b}
+.bc-inner a:hover{text-decoration:underline}
+.bc-inner .sep{margin:0 6px;color:#ccc}
+
+/* ── POST COUNT BADGE ── */
+.post-total{font-size:12px;color:#888;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #eee}
+</style>
+</head>
+<body class="home blog">
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="tb-inner">
+    <div class="tb-left">
+      <span><i class="fas fa-envelope fa-sm"></i> <a href="mailto:kerjasama@unpam.ac.id">kerjasama@unpam.ac.id</a></span>
+      <span class="sep">|</span>
+      <span><i class="fas fa-phone fa-sm"></i> (021) 7415566</span>
+      <span class="sep">|</span>
+      <span><i class="fas fa-map-marker-alt fa-sm"></i> Pamulang, Tangerang Selatan</span>
+    </div>
+    <div class="tb-right">
+      <a href="https://unpam.ac.id" target="_blank"><i class="fas fa-globe fa-sm"></i> unpam.ac.id</a>
+      <span class="sep">|</span>
+      <a href="https://siskerma.unpam.ac.id" target="_blank"><i class="fas fa-sign-in-alt fa-sm"></i> SISKERMA</a>
+      <span class="sep">|</span>
+      <div class="social">
+        <a href="https://facebook.com/unpam.official" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/kerma.unpam.ac.id" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER / BRANDING -->
+<header id="masthead">
+  <div class="site-branding">
+    <a href="#" class="logo-area">
+    <img src="https://kerjasama-unpam-ac-id.github.io/logo-unpam.png" 
+     alt="Logo Universitas Pamulang" width="65" height="65"/>
+      <div>
+        <div class="site-title">UNIVERSITAS PAMULANG
+          <span>LEMBAGA KERJASAMA</span>
+        </div>
+      </div>
+    </a>
+    <div class="header-right">
+      <strong>Berbagi Untuk Negeri</strong>
+      Portal Resmi Kerjasama Universitas Pamulang<br>
+      <small>kerjasama.unpam.ac.id</small>
+    </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav id="site-navigation">
+  <div class="nav-wrap">
+    <div class="menu-item current"><a href="#"><i class="fas fa-home" style="font-size:11px;margin-right:3px"></i> BERANDA</a></div>
+    <div class="menu-item has-children">
+      <a href="#">PROFIL</a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="#">Tentang Kami</a></li>
+        <li class="menu-item"><a href="#">Visi &amp; Misi</a></li>
+        <li class="menu-item"><a href="#">Tujuan</a></li>
+        <li class="menu-item"><a href="#">Struktur Organisasi</a></li>
+        <li class="menu-item"><a href="#">Lokasi</a></li>
+      </ul>
+    </div>
+    <div class="menu-item has-children">
+      <a href="#">KERJASAMA</a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="#">Kerjasama Dalam Negeri</a></li>
+        <li class="menu-item"><a href="#">Kerjasama Luar Negeri</a></li>
+        <li class="menu-item"><a href="#">Perguruan Tinggi</a></li>
+        <li class="menu-item"><a href="#">Instansi Pemerintah</a></li>
+        <li class="menu-item"><a href="#">Swasta / Industri</a></li>
+        <li class="menu-item"><a href="#">Nota Kesepahaman (MoU)</a></li>
+        <li class="menu-item"><a href="#">Perjanjian Kerjasama (PKS)</a></li>
+      </ul>
+    </div>
+    <div class="menu-item has-children">
+      <a href="#">KEGIATAN</a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="#">Berita Kegiatan</a></li>
+        <li class="menu-item"><a href="#">Implementasi Kerjasama</a></li>
+        <li class="menu-item"><a href="#">Galeri Foto</a></li>
+        <li class="menu-item"><a href="#">Video</a></li>
+      </ul>
+    </div>
+    <div class="menu-item"><a href="#">STATISTIK</a></div>
+    <div class="menu-item has-children">
+      <a href="#">LOGO MITRA</a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="#">Logo Perguruan Tinggi</a></li>
+        <li class="menu-item"><a href="#">Logo Instansi Pemerintah</a></li>
+        <li class="menu-item"><a href="#">Logo Perusahaan / Swasta</a></li>
+        <li class="menu-item"><a href="#">Logo Kerjasama</a></li>
+      </ul>
+    </div>
+    <div class="menu-item"><a href="https://siskerma.unpam.ac.id" target="_blank">SISKERMA</a></div>
+    <div class="menu-item"><a href="#">KONTAK</a></div>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<div id="hero">
+  <div class="slides-container" id="slidesContainer">
+
+    <!-- Slide 1 -->
+    <div class="slide">
+      <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/08/IMG_1088-scaled.jpg"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80'"
+           alt="Kerjasama UNPAM"/>
+      <div class="slide-overlay"></div>
+      <div class="slide-caption">
+        <h2>Kerjasama Universitas Pamulang</h2>
+        <p>Membangun jejaring kolaborasi untuk kemajuan pendidikan dan masyarakat Indonesia</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-15-at-13.17.12-1-scaled.jpeg"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80'"
+           alt="Penandatanganan MoU"/>
+      <div class="slide-overlay"></div>
+      <div class="slide-caption">
+        <h2>Penandatanganan Nota Kesepahaman (MoU)</h2>
+        <p>Menjalin kerjasama dengan berbagai instansi pemerintah, swasta, dan perguruan tinggi dalam maupun luar negeri</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-01-at-13.48.04-scaled.jpeg"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&q=80'"
+           alt="Kerjasama LLDIKTI"/>
+      <div class="slide-overlay"></div>
+      <div class="slide-caption">
+        <h2>Implementasi Tri Dharma Perguruan Tinggi</h2>
+        <p>Mewujudkan tridharma perguruan tinggi melalui program kerjasama yang berkelanjutan dan berdampak nyata</p>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/01/IT-Center-Universitas-Pamulang-dengan-Telkom-University.jpg"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1200&q=80'"
+           alt="Telkom University"/>
+      <div class="slide-overlay"></div>
+      <div class="slide-caption">
+        <h2>IT Center UNPAM × Telkom University</h2>
+        <p>Focus Group Discussion dalam rangka implementasi kerjasama di bidang teknologi informasi dan pendidikan</p>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+      <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/08/LaRIS-Malaysia.jpg"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1605711285791-0219e80e43a3?w=1200&q=80'"
+           alt="Kerjasama Internasional"/>
+      <div class="slide-overlay"></div>
+      <div class="slide-caption">
+        <h2>Kerjasama Internasional</h2>
+        <p>Membuka peluang kerjasama global bersama universitas dan lembaga riset internasional untuk meningkatkan kualitas UNPAM</p>
+      </div>
+    </div>
+
+  </div>
+  <button class="slider-ctrl prev" id="slPrev">&#10094;</button>
+  <button class="slider-ctrl next" id="slNext">&#10095;</button>
+  <div class="slider-dots" id="slDots"></div>
+</div>
+
+<!-- TICKER -->
+<div id="ticker">
+  <div class="ticker-label"><i class="fas fa-bullhorn"></i> BERITA</div>
+  <div class="ticker-inner">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item">&#x1F4CC; Kamis, 11 Jan 2024 &mdash; IT Center Universitas Pamulang dengan Telkom University melakukan Implementasi Kerjasama berupa Kegiatan Focus Group Discussion</span>
+      <span class="ticker-item">&#x1F4CC; 27&ndash;29 Feb 2024 &mdash; Universitas Pamulang dan KOMINFO melakukan Implementasi Kerjasama tentang Pelaksanaan Pelatihan DTS-Thematic Academy</span>
+      <span class="ticker-item">&#x1F4CC; Rabu, 18 Okt 2023 &mdash; UNPAM &amp; Institut Ummul Quro Al-Islami Bogor: Penandatanganan Nota Kesepahaman tentang Tridharma Perguruan Tinggi</span>
+      <span class="ticker-item">&#x1F4CC; 13 Agt 2023 &mdash; Universitas Pamulang dan LaRIS (Labuan Research, Innovation and Creativity Society) Malaysia resmi melakukan Penandatanganan MoU Kerjasama</span>
+      <span class="ticker-item">&#x1F4CC; 08 Jun 2023 &mdash; UNPAM melakukan kerjasama dengan Universitas Pelita Bangsa dalam bidang Tri Dharma Perguruan Tinggi</span>
+      <span class="ticker-item">&#x1F4CC; 02 Feb 2024 &mdash; Universitas Darunnajah dan Universitas Pamulang resmi Penandatanganan Nota Kesepahaman kerjasama tentang Tridharma Perguruan Tinggi</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">&#x1F4CC; Kamis, 11 Jan 2024 &mdash; IT Center Universitas Pamulang dengan Telkom University melakukan Implementasi Kerjasama berupa Kegiatan Focus Group Discussion</span>
+      <span class="ticker-item">&#x1F4CC; 27&ndash;29 Feb 2024 &mdash; Universitas Pamulang dan KOMINFO melakukan Implementasi Kerjasama tentang Pelaksanaan Pelatihan DTS-Thematic Academy</span>
+      <span class="ticker-item">&#x1F4CC; Rabu, 18 Okt 2023 &mdash; UNPAM &amp; Institut Ummul Quro Al-Islami Bogor: Penandatanganan Nota Kesepahaman tentang Tridharma Perguruan Tinggi</span>
+      <span class="ticker-item">&#x1F4CC; 13 Agt 2023 &mdash; Universitas Pamulang dan LaRIS (Labuan Research, Innovation and Creativity Society) Malaysia resmi melakukan Penandatanganan MoU Kerjasama</span>
+      <span class="ticker-item">&#x1F4CC; 08 Jun 2023 &mdash; UNPAM melakukan kerjasama dengan Universitas Pelita Bangsa dalam bidang Tri Dharma Perguruan Tinggi</span>
+      <span class="ticker-item">&#x1F4CC; 02 Feb 2024 &mdash; Universitas Darunnajah dan Universitas Pamulang resmi Penandatanganan Nota Kesepahaman kerjasama tentang Tridharma Perguruan Tinggi</span>
+    </div>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+  <div class="bc-inner">
+    <a href="#"><i class="fas fa-home" style="font-size:11px"></i> Beranda</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+
+  <!-- PRIMARY / POSTS -->
+  <main id="primary">
+
+    <p class="post-total">Menampilkan artikel terbaru kerjasama Universitas Pamulang</p>
+
+    <!-- FEATURED POST -->
+    <div class="section-heading"><i class="fas fa-fire"></i> Berita Utama</div>
+
+    <article class="post-featured">
+      <a href="#">
+        <div class="feat-thumb">
+          <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/01/IT-Center-Universitas-Pamulang-dengan-Telkom-University.jpg"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=900&q=80'"
+               alt="IT Center UNPAM Telkom University"/>
+        </div>
+      </a>
+      <div class="feat-body">
+        <span class="post-card-category">Implementasi Kerjasama</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Kamis, 11 Januari 2024</span>
+          <span><i class="fas fa-user"></i> Admin Kerjasama</span>
+          <span><i class="fas fa-folder"></i> Kegiatan</span>
+        </div>
+        <h2 class="feat-title"><a href="#">IT Center Universitas Pamulang dengan Telkom University melakukan Implementasi Kerjasama berupa Kegiatan Focus Group Discussion</a></h2>
+        <p class="feat-excerpt">Kamis, 11 Januari 2024 — IT Center Universitas Pamulang bersama Telkom University melaksanakan kegiatan Focus Group Discussion (FGD) sebagai wujud nyata implementasi kerjasama antara kedua institusi. Kegiatan ini bertujuan untuk meningkatkan kualitas pendidikan di bidang teknologi informasi dan mempererat sinergi antar perguruan tinggi dalam menghadapi era digitalisasi...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- POST LIST -->
+    <div class="section-heading" style="margin-top:6px"><i class="fas fa-newspaper"></i> Berita Terbaru</div>
+
+    <!-- Post 1 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/02/Universitas-Pamulang-dan-KOMINFO.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&q=80'"
+             alt="UNPAM KOMINFO"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Implementasi Kerjasama</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Selasa–Kamis, 27–29 Februari 2024</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dan KOMINFO melakukan Implementasi Kerjasama tentang Pelaksanaan Pelatihan DTS-Thematic Academy</a></h3>
+        <p class="post-card-excerpt">Implementasi kerjasama antara Universitas Pamulang dan Kementerian Komunikasi dan Informatika RI diwujudkan dengan dilaksanakannya Pelatihan Digital Talent Scholarship (DTS) Thematic Academy, memberikan pelatihan digital kepada masyarakat secara gratis...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/03/Universitas-Pamulang-dengan-BMKG.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1562564055-71e051d33c19?w=400&q=80'"
+             alt="UNPAM BMKG"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Penandatanganan MoU</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Rabu, 20 Maret 2024</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dengan BMKG (Badan Meteorologi, Klimatologi, dan Geofisika) Wilayah II melakukan penandatanganan dokumen perjanjian kerjasama</a></h3>
+        <p class="post-card-excerpt">Rabu, 20 Maret 2024 — Universitas Pamulang dan BMKG Wilayah II resmi menjalin kerjasama melalui penandatanganan dokumen perjanjian kerjasama dalam bidang pengembangan ilmu pengetahuan dan sumber daya manusia...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 3 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/02/Universitas-Darunnajah-dan-Universitas-Pamulang.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&q=80'"
+             alt="Darunnajah UNPAM"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Penandatanganan MoU</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Jum'at, 02 Februari 2024</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Darunnajah dan Universitas Pamulang resmi melakukan Penandatanganan Nota Kesepahaman kerjasama tentang Tridharma Perguruan Tinggi dan Merdeka Belajar Kampus Merdeka</a></h3>
+        <p class="post-card-excerpt">Jum'at, 02 Februari 2024 — Universitas Darunnajah dan Universitas Pamulang dengan bangga mengumumkan penandatanganan resmi Nota Kesepahaman (MoU) tentang kerjasama Tridharma Perguruan Tinggi dan program MBKM...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 4 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/01/Universitas-Pamulang-dan-Universitas-Esa-Unggul.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=400&q=80'"
+             alt="UNPAM Esa Unggul"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Perguruan Tinggi</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Selasa, 30 Januari 2024</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dengan Universitas Esa Unggul resmi melakukan Penandatanganan Nota Kesepahaman tentang Penyelenggaraan Tridharma Perguruan Tinggi</a></h3>
+        <p class="post-card-excerpt">Selasa, 30 Januari 2024 — Universitas Pamulang dan Universitas Esa Unggul resmi menandatangani Nota Kesepahaman dalam rangka penguatan kerjasama di bidang pendidikan, penelitian, dan pengabdian kepada masyarakat...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 5 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/01/Garuda-E-Sport-Universitas-Pamulang.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80'"
+             alt="Garuda E-Sport UNPAM"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Swasta / Industri</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Jum'at, 05 Januari 2024</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Ketua LPK Universitas Pamulang dan Garuda E-Sport mengumumkan kolaborasi inovatif mengenai Penyelenggaraan Pendidikan Kursus Pelatihan</a></h3>
+        <p class="post-card-excerpt">Jum'at, 05 Januari 2024 — Ketua LPK (Lembaga Pelatihan Kerja) Universitas Pamulang dan Garuda E-Sport mengumumkan kolaborasi inovatif yang akan membuka peluang baru di bidang industri esports dan digital entertainment...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 6 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/12/Universitas-Pamulang-dan-BPIP.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80'"
+             alt="UNPAM BPIP"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Instansi Pemerintah</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Rabu, 15 November 2023</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dan Badan Pembinaan Ideologi Pancasila Republik Indonesia telah menandatangani Nota Kesepahaman</a></h3>
+        <p class="post-card-excerpt">Rabu, 15 November 2023 — Universitas Pamulang dan Badan Pembinaan Ideologi Pancasila (BPIP) RI menandatangani Nota Kesepahaman sebagai bentuk komitmen bersama dalam penguatan nilai-nilai Pancasila di lingkungan perguruan tinggi...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 7 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/10/Universitas-Pamulang-dengan-Institut-Ummul-Quro.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=400&q=80'"
+             alt="UNPAM Ummul Quro"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Perguruan Tinggi</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Rabu, 18 Oktober 2023</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dengan Institut Ummul Quro Al-Islami Bogor Penandatanganan Nota Kesepahaman Tentang Tridharma Perguruan Tinggi</a></h3>
+        <p class="post-card-excerpt">Rabu, 18 Oktober 2023 — Universitas Pamulang dan Institut Ummul Quro Al-Islami Bogor resmi menjalin kerjasama dalam bidang Tridharma Perguruan Tinggi yang meliputi pendidikan, penelitian, dan pengabdian masyarakat...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 8 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/09/APPBIPA-Korea.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=80'"
+             alt="UNPAM APPBIPA Korea"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Kerjasama Luar Negeri</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Jumat, 16 Februari 2024</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dengan Asosiasi Pengajar Dan Pengiat Bahasa Indonesia Untuk Penutur Asing (APPBIPA) Korea Selatan resmi Penandatanganan Nota Kesepahaman</a></h3>
+        <p class="post-card-excerpt">Jumat, 16 Februari 2024 — Universitas Pamulang menjalin kerjasama internasional dengan APPBIPA Korea Selatan dalam rangka pengembangan pengajaran Bahasa Indonesia untuk Penutur Asing (BIPA) di Korea...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 9 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/08/LaRIS-Malaysia.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80'"
+             alt="UNPAM LaRIS Malaysia"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Kerjasama Luar Negeri</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Minggu, 13 Agustus 2023</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang dan LaRIS (Labuan Research, Innovation and Creativity Society) Malaysia Resmi Melakukan Penandatanganan Nota Kesepahaman Kerjasama</a></h3>
+        <p class="post-card-excerpt">13 Agustus 2023 — Universitas Pamulang dan LaRIS Malaysia resmi menandatangani Nota Kesepahaman kerjasama internasional untuk peningkatan riset, inovasi, dan kreativitas dalam bidang ilmu pengetahuan dan teknologi...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- Post 10 -->
+    <article class="post-card">
+      <a href="#" class="post-card-thumb">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/06/Universitas-Pelita-Bangsa.jpg"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=80'"
+             alt="UNPAM Pelita Bangsa"/>
+      </a>
+      <div class="post-card-body">
+        <span class="post-card-category">Perguruan Tinggi</span>
+        <div class="post-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Kamis, 08 Juni 2023</span>
+          <span><i class="fas fa-user"></i> Admin</span>
+        </div>
+        <h3 class="post-card-title"><a href="#">Universitas Pamulang melakukan kerjasama dengan Universitas Pelita Bangsa pada tanggal 08 Juni 2023 dalam bidang Tri Dharma Perguruan Tinggi</a></h3>
+        <p class="post-card-excerpt">Kamis, 08 Juni 2023 — Universitas Pamulang melakukan kerjasama dengan Universitas Pelita Bangsa, kegiatan tersebut dihadiri langsung oleh para pimpinan kedua institusi dan ditandai dengan penandatanganan nota kesepahaman...</p>
+        <a href="#" class="post-card-more">Baca Selengkapnya &raquo;</a>
+      </div>
+    </article>
+
+    <!-- PAGINATION -->
+    <div class="nav-links">
+      <span class="current">1</span>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <span>&hellip;</span>
+      <a href="#">&#8250;</a>
+    </div>
+
+  </main><!-- #primary -->
+
+  <!-- SIDEBAR -->
+  <aside id="secondary">
+
+    <!-- SISKERMA Banner -->
+    <div class="siskerma-widget">
+      <span class="sw-icon"><i class="fas fa-file-signature"></i></span>
+      <h3>SISKERMA</h3>
+      <p>Aplikasi Pelaporan Kerjasama<br>Universitas Pamulang</p>
+      <a href="https://siskerma.unpam.ac.id" class="btn-siskerma" target="_blank"><i class="fas fa-sign-in-alt"></i> LOGIN SISKERMA</a>
+      <a href="https://siskerma.unpam.ac.id/register" class="btn-daftar" target="_blank">Daftarkan Kerjasama Anda</a>
+    </div>
+
+    <!-- Search Widget -->
+    <div class="widget">
+      <h3 class="widget-title"><i class="fas fa-search"></i> Pencarian</h3>
+      <div class="widget-body">
+        <form class="search-form" role="search">
+          <input type="search" placeholder="Cari artikel kerjasama..."/>
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Recent Posts -->
+    <div class="widget">
+      <h3 class="widget-title"><i class="fas fa-clock"></i> Artikel Terbaru</h3>
+      <div class="widget-body" style="padding:10px">
+        <ul class="side-posts">
+          <li>
+            <img class="spost-thumb"
+                 src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/01/IT-Center-Universitas-Pamulang-dengan-Telkom-University.jpg"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/58x44/21759b/fff?text=UNPAM'"
+                 alt="post"/>
+            <div class="spost-text">
+              <a class="spost-title" href="#">IT Center UNPAM dengan Telkom University – Focus Group Discussion</a>
+              <span class="spost-date"><i class="fas fa-calendar-alt"></i> 11 Januari 2024</span>
+            </div>
+          </li>
+          <li>
+            <img class="spost-thumb"
+                 src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/02/Universitas-Pamulang-dan-KOMINFO.jpg"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/58x44/ecb200/fff?text=UNPAM'"
+                 alt="post"/>
+            <div class="spost-text">
+              <a class="spost-title" href="#">UNPAM &amp; KOMINFO – Pelatihan DTS-Thematic Academy</a>
+              <span class="spost-date"><i class="fas fa-calendar-alt"></i> 27–29 Feb 2024</span>
+            </div>
+          </li>
+          <li>
+            <img class="spost-thumb"
+                 src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/02/Universitas-Darunnajah-dan-Universitas-Pamulang.jpg"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/58x44/21759b/fff?text=UNPAM'"
+                 alt="post"/>
+            <div class="spost-text">
+              <a class="spost-title" href="#">Universitas Darunnajah &amp; UNPAM – Nota Kesepahaman Tridharma</a>
+              <span class="spost-date"><i class="fas fa-calendar-alt"></i> 02 Februari 2024</span>
+            </div>
+          </li>
+          <li>
+            <img class="spost-thumb"
+                 src="https://kerjasama.unpam.ac.id/wp-content/uploads/2024/01/Garuda-E-Sport-Universitas-Pamulang.jpg"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/58x44/ecb200/fff?text=UNPAM'"
+                 alt="post"/>
+            <div class="spost-text">
+              <a class="spost-title" href="#">LPK UNPAM &amp; Garuda E-Sport – Kolaborasi Pendidikan Kursus</a>
+              <span class="spost-date"><i class="fas fa-calendar-alt"></i> 05 Januari 2024</span>
+            </div>
+          </li>
+          <li>
+            <img class="spost-thumb"
+                 src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/10/Universitas-Pamulang-dengan-Institut-Ummul-Quro.jpg"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/58x44/21759b/fff?text=UNPAM'"
+                 alt="post"/>
+            <div class="spost-text">
+              <a class="spost-title" href="#">UNPAM &amp; Institut Ummul Quro Al-Islami – MoU Tridharma</a>
+              <span class="spost-date"><i class="fas fa-calendar-alt"></i> 18 Oktober 2023</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="widget">
+      <h3 class="widget-title"><i class="fas fa-folder-open"></i> Kategori</h3>
+      <div class="widget-body" style="padding:10px 14px">
+        <ul class="cat-list">
+          <li><a href="#">Perguruan Tinggi <span class="cat-count">128</span></a></li>
+          <li><a href="#">Instansi Pemerintah <span class="cat-count">64</span></a></li>
+          <li><a href="#">Swasta / Industri <span class="cat-count">92</span></a></li>
+          <li><a href="#">Kerjasama Luar Negeri <span class="cat-count">45</span></a></li>
+          <li><a href="#">Implementasi Kerjasama <span class="cat-count">210</span></a></li>
+          <li><a href="#">Penandatanganan MoU <span class="cat-count">185</span></a></li>
+          <li><a href="#">MBKM / Merdeka Belajar <span class="cat-count">38</span></a></li>
+          <li><a href="#">Sosial Masyarakat <span class="cat-count">27</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="widget">
+      <h3 class="widget-title"><i class="fas fa-calendar"></i> Kalender</h3>
+      <div class="widget-body" style="padding:10px">
+        <table id="wp-calendar">
+          <caption>Maret 2026</caption>
+          <thead>
+            <tr><th>Min</th><th>Sen</th><th>Sel</th><th>Rab</th><th>Kam</th><th>Jum</th><th>Sab</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="pad"></td><td class="pad"></td><td class="pad"></td><td class="pad"></td><td class="pad"></td><td class="pad"></td><td>1</td></tr>
+            <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+            <tr><td>9</td><td>10</td><td><a href="#">11</a></td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+            <tr><td>16</td><td>17</td><td><strong style="color:#ecb200">18</strong></td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+            <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+            <tr><td>30</td><td>31</td><td class="pad"></td><td class="pad"></td><td class="pad"></td><td class="pad"></td><td class="pad"></td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="3"><a href="#">&laquo; Feb</a></td><td>&nbsp;</td><td colspan="3" style="text-align:right"><a href="#">Apr &raquo;</a></td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="widget">
+      <h3 class="widget-title"><i class="fas fa-tags"></i> Tag</h3>
+      <div class="tag-cloud">
+        <a href="#">MoU</a><a href="#">PKS</a><a href="#">Kerjasama</a><a href="#">UNPAM</a>
+        <a href="#">Tridharma</a><a href="#">MBKM</a><a href="#">Internasional</a><a href="#">Perguruan Tinggi</a>
+        <a href="#">Kominfo</a><a href="#">Daikin</a><a href="#">Malaysia</a><a href="#">BRIN</a>
+        <a href="#">BTN</a><a href="#">Pegadaian</a><a href="#">LLDIKTI</a><a href="#">Telkom</a>
+      </div>
+    </div>
+
+    <!-- Link Mitra Instansi -->
+    <div class="widget">
+      <h3 class="widget-title"><i class="fas fa-link"></i> Instansi Terkait</h3>
+      <div class="widget-body" style="padding:10px 14px">
+        <ul class="cat-list" style="font-size:12px">
+          <li><a href="https://www.kemdikbud.go.id/" target="_blank">Kementerian Pendidikan dan Kebudayaan</a></li>
+          <li><a href="https://lebakkab.go.id/" target="_blank">Kabupaten Lebak Terintegrasi</a></li>
+          <li><a href="https://dp3akkb.bantenprov.go.id/" target="_blank">DP3AKKB Provinsi Banten</a></li>
+          <li><a href="https://kecserut.tangerangselatankota.go.id/" target="_blank">Kecamatan Serpong Utara</a></li>
+          <li><a href="https://banten.kemenkumham.go.id/" target="_blank">Kemenkumham Kanwil Banten</a></li>
+          <li><a href="https://unpam.ac.id" target="_blank">Website Resmi UNPAM</a></li>
+          <li><a href="https://siskerma.unpam.ac.id" target="_blank">SISKERMA UNPAM</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </aside><!-- #secondary -->
+</div><!-- #main-content -->
+
+<!-- STATS COUNTER SECTION -->
+<section id="stats-section">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+      <div class="stat-number"><span class="ctr" data-target="350">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-label">Total Kerjasama</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon"><i class="fas fa-university"></i></div>
+      <div class="stat-number"><span class="ctr" data-target="128">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-label">Perguruan Tinggi Mitra</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon"><i class="fas fa-globe-asia"></i></div>
+      <div class="stat-number"><span class="ctr" data-target="45">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-label">Kerjasama Internasional</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon"><i class="fas fa-building"></i></div>
+      <div class="stat-number"><span class="ctr" data-target="185">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-label">Instansi Pemerintah &amp; Swasta</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS / LOGO MITRA -->
+<section id="partners">
+  <div class="partners-inner">
+    <div class="section-block-title">
+      <h2>Mitra Kerjasama Universitas Pamulang</h2>
+      <p>Bergabung bersama ratusan mitra terpercaya dari dalam dan luar negeri</p>
+      <div class="divider"></div>
+    </div>
+    <div class="logo-grid">
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2020/06/logo-kemdikbud.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Kemendikbud<br>Ristek</div>'"
+             alt="Kemendikbud Ristek"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2020/06/logo-kominfo.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>KOMINFO<br>RI</div>'"
+             alt="Kominfo"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/07/Telkom-University.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Telkom<br>University</div>'"
+             alt="Telkom University"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2020/06/logo-daikin.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Daikin<br>Indonesia</div>'"
+             alt="Daikin"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/10/PT-Bank-Tabungan-Negara-BTN.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Bank BTN</div>'"
+             alt="Bank BTN"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/09/PT-Pegadaian.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>PT Pegadaian</div>'"
+             alt="PT Pegadaian"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2020/09/Polresta-Tangerang-Selatan.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Polresta<br>Tangsel</div>'"
+             alt="Polresta Tangsel"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2020/09/Pemkot-Serang.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Pemkot<br>Serang</div>'"
+             alt="Pemkot Serang"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2021/11/BRIN.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>BRIN</div>'"
+             alt="BRIN"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2022/08/Universitas-Multimedia-Nusantara.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>Univ. Multimedia<br>Nusantara</div>'"
+             alt="UMN"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/03/Universiti-Tun-Hussein-Onn-Malaysia.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>UTHM<br>Malaysia</div>'"
+             alt="UTHM Malaysia"/>
+      </div>
+      <div class="logo-cell">
+        <img src="https://kerjasama.unpam.ac.id/wp-content/uploads/2023/08/LaRIS-Malaysia-logo.png"
+             onerror="this.onerror=null;this.style.display='none';this.parentNode.innerHTML='<div class=\'logo-name\'>LaRIS<br>Malaysia</div>'"
+             alt="LaRIS Malaysia"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="colophon">
+  <div class="footer-widgets">
+
+    <!-- Col 1: About -->
+    <div class="footer-widget">
+      <div class="footer-logo-wrap">
+        <img src="https://kerjasama-unpam-ac-id.github.io/logo-unpam.png"
+             onerror="this.onerror=null;this.src='https://kerjasama-unpam-ac-id.github.io/logo-unpam.png'"
+             alt="Logo UNPAM" width="50"/>
+        <div>
+          <div class="ftitle">UNIVERSITAS PAMULANG</div>
+          <div class="fsub">Lembaga Kerjasama</div>
+        </div>
+      </div>
+      <h4>Tentang Kami</h4>
+      <p>Menyediakan pendidikan tinggi bagi seluruh masyarakat Indonesia telah menjadi tujuan utama Universitas Pamulang. Sesuai dengan slogan <em>"Berbagi Untuk Negeri"</em>, UNPAM terus menjalin kerjasama strategis dengan berbagai lembaga akademik, pemerintahan, swasta dan masyarakat, baik di dalam maupun luar negeri.</p>
+      <div class="footer-social">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Col 2: Menu -->
+    <div class="footer-widget">
+      <h4>Menu Utama</h4>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Kerjasama Dalam Negeri</a></li>
+        <li><a href="#">Kerjasama Luar Negeri</a></li>
+        <li><a href="#">Instansi Pemerintah</a></li>
+        <li><a href="#">Swasta / Industri</a></li>
+        <li><a href="#">Kegiatan</a></li>
+        <li><a href="#">Statistik</a></li>
+        <li><a href="#">Logo Mitra</a></li>
+        <li><a href="https://siskerma.unpam.ac.id" target="_blank">SISKERMA</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Link Terkait -->
+    <div class="footer-widget">
+      <h4>Link Terkait</h4>
+      <ul>
+        <li><a href="https://unpam.ac.id" target="_blank">Website Resmi UNPAM</a></li>
+        <li><a href="https://siskerma.unpam.ac.id" target="_blank">SISKERMA</a></li>
+        <li><a href="https://pmb.unpam.ac.id" target="_blank">PMB UNPAM</a></li>
+        <li><a href="https://helpdesk.unpam.ac.id" target="_blank">Helpdesk UNPAM</a></li>
+        <li><a href="https://lppm.unpam.ac.id" target="_blank">LPPM UNPAM</a></li>
+        <li><a href="#" target="_blank">LLDIKTI Wilayah IV</a></li>
+        <li><a href="https://www.kemdikbud.go.id/" target="_blank">Kemendikbud Ristek</a></li>
+        <li><a href="#" target="_blank">Yayasan Sasmita Jaya</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Kontak -->
+    <div class="footer-widget">
+      <h4>Kontak Kami</h4>
+      <ul class="footer-contact">
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Kampus 2 Unpam Viktor, Jl. Puspitek, Buaran, Kec. Pamulang, Kota Tangerang Selatan, Banten 15310</span>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:kerjasama@unpam.ac.id" style="color:#adb5bd">kerjasama@unpam.ac.id</a></span>
+        </li>
+        <li>
+          <i class="fab fa-instagram"></i>
+          <span>@kerma.unpam.ac.id</span>
+        </li>
+        <li>
+          <i class="fas fa-globe"></i>
+          <span><a href="https://kerjasama.unpam.ac.id" target="_blank" style="color:#adb5bd">kerjasama.unpam.ac.id</a></span>
+        </li>
+        <li>
+          <i class="fas fa-phone-alt"></i>
+          <span>(021) 7415566</span>
+        </li>
+        <li>
+          <i class="fas fa-fax"></i>
+          <span>(021) 7412566</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    &copy; 2024 <strong>Lembaga Kerjasama Universitas Pamulang</strong>. All Rights Reserved.
+    &nbsp;|&nbsp; Powered by <a href="https://unpam.ac.id" target="_blank">IT Center UNPAM</a>
+    &nbsp;|&nbsp; <a href="https://kerjasama.unpam.ac.id" target="_blank">kerjasama.unpam.ac.id</a>
+    &nbsp;|&nbsp; <a href="https://siskerma.unpam.ac.id" target="_blank">siskerma.unpam.ac.id</a>
+  </div>
+</footer>
+
+<script>
+// ── SLIDER ──
+(function(){
+  var container = document.getElementById('slidesContainer');
+  var slides = container.querySelectorAll('.slide');
+  var dotsWrap = document.getElementById('slDots');
+  var total = slides.length;
+  var cur = 0;
+  var timer;
+
+  // build dots
+  for(var i=0;i<total;i++){
+    var d=document.createElement('div');
+    d.className='sdot'+(i===0?' on':'');
+    d.setAttribute('data-i',i);
+    d.addEventListener('click',function(){goTo(+this.getAttribute('data-i'));});
+    dotsWrap.appendChild(d);
+  }
+
+  function goTo(n){
+    cur=(n+total)%total;
+    container.style.transform='translateX(-'+cur*100+'%)';
+    dotsWrap.querySelectorAll('.sdot').forEach(function(d,i){
+      d.classList.toggle('on',i===cur);
+    });
+    clearInterval(timer);
+    timer=setInterval(function(){goTo(cur+1);},5500);
+  }
+
+  document.getElementById('slPrev').addEventListener('click',function(){goTo(cur-1);});
+  document.getElementById('slNext').addEventListener('click',function(){goTo(cur+1);});
+  timer=setInterval(function(){goTo(cur+1);},5500);
+})();
+
+// ── COUNTER ──
+(function(){
+  var done=false;
+  function run(){
+    if(done)return;
+    var sec=document.getElementById('stats-section');
+    var rect=sec.getBoundingClientRect();
+    if(rect.top<window.innerHeight){
+      done=true;
+      document.querySelectorAll('.ctr').forEach(function(el){
+        var target=+el.getAttribute('data-target');
+        var step=Math.max(1,Math.ceil(target/60));
+        var v=0;
+        var t=setInterval(function(){
+          v+=step;
+          if(v>=target){v=target;clearInterval(t);}
+          el.textContent=v;
+        },22);
+      });
+    }
+  }
+  window.addEventListener('scroll',run);
+  run();
+})();
+</script>
+</body>
+</html>
